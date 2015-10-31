@@ -13,4 +13,6 @@ var [a, b, c] = [1, 2, 3];
 
 console.log(a, b, c);
 
-console.log("dsdsds")
+console.log("dsdsds");
+
+console.log("heiheihei");
