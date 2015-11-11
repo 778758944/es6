@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/778758944/es6/issues"
   },
-  "homepage": "https://github.com/778758944/es6#readme"
+  "homepage": "https://github.com/778758944/es6#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
 }

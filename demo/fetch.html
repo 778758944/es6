@@ -7,12 +7,59 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
 </head>
 <body>
+	<div>hahah</div>
     <script>
-    fetch("http://localhost:3000/attractions").then(function(res){
-    	console.log(res);
+    fetch("http://localhost:3000/getdata").then(function(res){
+    	res.json().then(function(data){
+    		console.log(data);
+    	})
+    });
+
+    fetch("http://localhost:3000/getdata",{
+    	method:"POST",
+    	headers:{
+    		"Content-Type":"application/x-www-form-urlencoded"
+    	},
+    	body:"firstName=Nikhil&favColor=blue&password=easytoguess"
+    }).then(function(res){
+
+    });
+
+    $.post("/getdata",{
+    	name:"jack",
+    	age:10
+    },function(data){
+    	console.log(data);
     });
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
