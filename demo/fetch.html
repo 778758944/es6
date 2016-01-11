@@ -12,28 +12,37 @@
 <body>
 	<div>hahah</div>
     <script>
-    fetch("http://localhost:3000/getdata").then(function(res){
-    	res.json().then(function(data){
-    		console.log(data);
-    	})
-    });
+    // fetch("http://localhost:3000/getdata").then(function(res){
+    // 	res.json().then(function(data){
+    // 		console.log(data);
+    // 	})
+    // });
 
-    fetch("http://localhost:3000/getdata",{
-    	method:"POST",
-    	headers:{
-    		"Content-Type":"application/x-www-form-urlencoded"
-    	},
-    	body:"firstName=Nikhil&favColor=blue&password=easytoguess"
-    }).then(function(res){
+    // fetch("http://localhost:3000/getdata",{
+    // 	method:"POST",
+    // 	headers:{
+    // 		"Content-Type":"application/x-www-form-urlencoded"
+    // 	},
+    // 	body:"firstName=Nikhil&favColor=blue&password=easytoguess"
+    // }).then(function(res){
+    //     console.log(res);
+    //     res.json().then(function(data){
+    //         console.log(data);
+    //     })
+    // });
 
-    });
+    // $.post("/getdata",{
+    // 	name:"jack",
+    // 	age:10
+    // },function(data){
+    // 	console.log(data);
+    // });
 
-    $.post("/getdata",{
-    	name:"jack",
-    	age:10
-    },function(data){
-    	console.log(data);
-    });
+    var req=new Request("/test.html");
+    console.log(req);
+    // req.json().then(function(data){
+        // console.log(data);
+    // })
     </script>
 </body>
 </html>

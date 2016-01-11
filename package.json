@@ -18,6 +18,7 @@
   "homepage": "https://github.com/778758944/es6#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "webpack": "^1.12.10"
   }
 }

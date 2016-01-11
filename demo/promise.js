@@ -42,23 +42,40 @@ var p3=new Promise(function(resolve,reject){
 
 var p=Promise.resolve("Hello");
 p.then(function(txt){
-	console.log(txt);
+	// console.log(txt);
 });
 
 function* gen(){
 	var result=yield fetch("http://v2.foodinzen.inzen.com.cn/menu.json");
-	console.log(result);
+	// console.log(result);
 }
 
-var g=gen();
-var result=g.next();
-console.log(result);
+// var g=gen();
+// var result=g.next();
+// // console.log(result);
 
-result.value.then(function(data){
-	g.next(data);
-},function(){
-	console.log("error");
-})
+// result.value.then(function(data){
+// 	g.next(data.json());
+// },function(){
+// 	console.log("error");
+// });
+
+var ajaxPromise=function(url){
+	return new Promise(function(resolve,rejected){
+		$.get(url,function(data){
+			resolve(data);
+		})
+	})
+}
+
+var asyncData=async function(){
+	var f1=await ajaxPromise("http://v2.foodinzen.inzen.com.cn/menu.json");
+	console.log(f1);
+}
+
+
+asyncData();
+
 
 
 

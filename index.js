@@ -24,8 +24,15 @@ app.get("/getdata",function(req,res){
 	})
 });
 
+app.get("/test.html",function(req,res){
+	console.log("kkk");
+	var read=fs.createReadStream(__dirname+"/test.html");
+	read.pipe(res);
+});
+
 app.post("/getdata",function(req,res){
 	console.log(req.body);
+	res.json(req.body);
 })
 
 
