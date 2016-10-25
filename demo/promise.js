@@ -7,8 +7,25 @@
 function timeout(ms){
 	return new Promise((a,b)=>{
 		setTimeout(a,ms,"done");
+		setTimeout(b,1000,'reject');
 	});
 }
+
+
+timeout(1010).then(function(data){
+	console.log(data);
+},function(data){
+	console.log(data);
+});
+
+
+setTimeout(function(){
+	console.log('now listening')
+},3000)
+
+
+
+/*
 
 timeout(100).then((value)=>{
 	// console.log(value);
@@ -75,6 +92,13 @@ var asyncData=async function(){
 
 
 asyncData();
+*/
+
+
+
+
+
+
 
 
 

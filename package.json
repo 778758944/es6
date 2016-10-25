@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/778758944/es6#readme",
   "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-node4": "^2.1.0",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "webpack": "^1.12.10"
